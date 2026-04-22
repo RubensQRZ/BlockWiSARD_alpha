@@ -1,0 +1,283 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="corrupt_code_block" id="`3il|:7GE}Y0E`;!Jh:m" x="91" y="-29">
+    <next>
+      <block type="repetir_sempre" id=".LJ`~imt8U+C9XwmF[dR">
+        <statement name="repeat_code">
+          <block type="falar" id="/wfiwUlSq:ho0fS%DBDb">
+            <value name="TEXT">
+              <shadow type="text_speak" id="*BlN-},=g|:VWQ}0}4gj">
+                <field name="TEXT">Para eu aprender uma imagem,  tecle: a</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="falar" id="14L`Z!rsnS~!)P:*nmvJ">
+                <value name="TEXT">
+                  <shadow type="text_speak" id="_+QIJm5?-P[b;s1BI_k;">
+                    <field name="TEXT">Para eu reconhecer uma imagem, tecle: r</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="le_texto_teclado" id="vk}q/VMwDvsX|KM*zyV7">
+                    <next>
+                      <block type="condicional_simples" id="lQd!_;E}@(Eq=s@+Ef=i">
+                        <value name="condicao">
+                          <block type="condicionante_texto_teclado" id="s@i!^MDIP8+n4l!3dVvB">
+                            <field name="texto_teclado">a</field>
+                          </block>
+                        </value>
+                        <statement name="codigo_condicional">
+                          <block type="falar" id="L%pN7YV-l`3*=Sk`o_OJ">
+                            <value name="TEXT">
+                              <shadow type="text_speak" id="|ajJF*hK!S]wM5Hlg|UP">
+                                <field name="TEXT">tecle f  para me ensinar um exemplo de flor</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="falar" id="pLD[;e/bDpHL`AlJ}{%K">
+                                <value name="TEXT">
+                                  <shadow type="text_speak" id="wEugWo1F!z),gFCfLgiS">
+                                    <field name="TEXT">ou e para me ensinar um exemplo de estrela</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="le_texto_teclado" id="AYaw5ffse*RgB-DWKG05">
+                                    <next>
+                                      <block type="condicional_simples" id="YVF,SAFMX*GEDC1)BkFc">
+                                        <value name="condicao">
+                                          <block type="condicionante_texto_teclado" id="}T-tJcNqsgdDi+p7x]wM">
+                                            <field name="texto_teclado">f</field>
+                                          </block>
+                                        </value>
+                                        <statement name="codigo_condicional">
+                                          <block type="falar" id="LgVi|8@!^!rQM@MgAeag">
+                                            <value name="TEXT">
+                                              <shadow type="text_speak" id="B0PX#20h@)cmT7bTl`ot">
+                                                <field name="TEXT">me mostre um exemplo de flor</field>
+                                              </shadow>
+                                            </value>
+                                            <next>
+                                              <block type="falar" id="UI)=+u(qa1JUt}S#wV7p">
+                                                <value name="TEXT">
+                                                  <shadow type="text_speak" id="3kxs8,o5KMO~VI/*[1D9">
+                                                    <field name="TEXT">e aperte enter</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="espera_tecla_enter" id="tC[9lq35cB7A@8.jrNls">
+                                                    <next>
+                                                      <block type="block_wisard_get_picture" id="iYZYNy3-p,qA}uA_~6#C">
+                                                        <next>
+                                                          <block type="mostra_imagem_no_terminal_de_video" id=")Tvq-yHWD^m??M]6ZZ2s">
+                                                            <value name="IMAGE">
+                                                              <shadow type="apresenta_imagem_branca" id="kY-^IbzAnfp:bz=/ca?8"></shadow>
+                                                              <block type="apresenta_imagem_fotografada" id="cm|.xODFzfzkk_PF=S0("></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="falar" id="ru_4vY+z_-fVwWQTdzd-">
+                                                                <value name="TEXT">
+                                                                  <shadow type="text_speak" id="+FlaY*VRPfrRlt=;B{Yq">
+                                                                    <field name="TEXT">para eu aprender com essa foto, tecle, s, ou tecle, n, para descartar</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="le_texto_teclado" id="ZyOl~Yvs@f*cX~(z#@:,">
+                                                                    <next>
+                                                                      <block type="condicional_simples" id="LIZiXL#Nq:co@%J)=`Wo">
+                                                                        <value name="condicao">
+                                                                          <block type="condicionante_texto_teclado" id="zR])d;%`LKCbuX!!P!0O">
+                                                                            <field name="texto_teclado">s</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <statement name="codigo_condicional">
+                                                                          <block type="corrupt_code_block" id="{mo^OD?B)}Ps6fL}{GSX"></block>
+                                                                        </statement>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="condicional_simples" id="GK=qV,c@Y~tcq/l-+VaB">
+                                            <value name="condicao">
+                                              <block type="condicionante_texto_teclado" id="[`(B=)bWTSn6,n1+{=`3">
+                                                <field name="texto_teclado">e</field>
+                                              </block>
+                                            </value>
+                                            <statement name="codigo_condicional">
+                                              <block type="falar" id="4mA%:aHdrB`RYosfXRv~">
+                                                <value name="TEXT">
+                                                  <shadow type="text_speak" id="-c%j9AuH5n!nq#PPs8es">
+                                                    <field name="TEXT">me mostre um exemplo de estrela</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="falar" id="qEMNC@Ago.Gx}RT}G4l2">
+                                                    <value name="TEXT">
+                                                      <shadow type="text_speak" id="WIK!xTeCd15HRJ+F@j|!">
+                                                        <field name="TEXT">e aperte enter</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <next>
+                                                      <block type="espera_tecla_enter" id="LS3i0[.XcGu{695fiRUL">
+                                                        <next>
+                                                          <block type="block_wisard_get_picture" id="}:ilPRK`tC|(*HMn((?+">
+                                                            <next>
+                                                              <block type="mostra_imagem_no_terminal_de_video" id="98(wai!v5G3FjM+r}?fr">
+                                                                <value name="IMAGE">
+                                                                  <shadow type="apresenta_imagem_branca" id="kY-^IbzAnfp:bz=/ca?8"></shadow>
+                                                                  <block type="apresenta_imagem_fotografada" id="`P-v#:66o(`pU~(aOsjS"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="falar" id="g^9JC]%Xk98vw1Hxgz_k">
+                                                                    <value name="TEXT">
+                                                                      <shadow type="text_speak" id="t+8xqn{).N6farVL~)g-">
+                                                                        <field name="TEXT">para eu aprender com essa foto, tecle, s, ou tecle, n, para descartar</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="le_texto_teclado" id="E;H;@2lq+A-U#*p=qUpH">
+                                                                        <next>
+                                                                          <block type="condicional_simples" id=",+t;64K|Sm@mq1Kn)3IE">
+                                                                            <value name="condicao">
+                                                                              <block type="condicionante_texto_teclado" id="K0^o;Km{1Wm[5PlG~l@G">
+                                                                                <field name="texto_teclado">s</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <statement name="codigo_condicional">
+                                                                              <block type="corrupt_code_block" id="6xUJ:%[,nA3-gF1h#EOg"></block>
+                                                                            </statement>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="condicional_simples" id="Kr_6I[Q#6:p/n`tLVL;]">
+                            <value name="condicao">
+                              <block type="condicionante_texto_teclado" id=";aU9-XVoi9pjO[6D6L~U">
+                                <field name="texto_teclado">r</field>
+                              </block>
+                            </value>
+                            <statement name="codigo_condicional">
+                              <block type="falar" id="[:5w^)[x5yYoC7@sq(la">
+                                <value name="TEXT">
+                                  <shadow type="text_speak" id="PpXS`dfz*D.LM*sDOY:Y">
+                                    <field name="TEXT">Me mostre uma imagem e aperte enter</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="espera_tecla_enter" id="z;]Qfq-;h?+Rpy@F]E^`">
+                                    <next>
+                                      <block type="block_wisard_get_picture" id="rdt#oL+J-^`L:!hweq_`">
+                                        <next>
+                                          <block type="mostra_imagem_no_terminal_de_video" id="=I4dIKKugQ+gnAo,7E9Q">
+                                            <value name="IMAGE">
+                                              <shadow type="apresenta_imagem_branca" id="jJNMmeOvlh2v_Qh!MJ{)"></shadow>
+                                              <block type="apresenta_imagem_fotografada" id="c{?C5f.q,jAk_n2Hk1x%"></block>
+                                            </value>
+                                            <next>
+                                              <block type="corrupt_code_block" id="eew5HF^k,5IaIu_Y;emU">
+                                                <next>
+                                                  <block type="condicional_simples" id="{46p,I@]-K(}fz404{K!">
+                                                    <value name="condicao">
+                                                      <block type="corrupt_condition_block" id=";0h:*K+OW#-hg.fLU;)B"></block>
+                                                    </value>
+                                                    <statement name="codigo_condicional">
+                                                      <block type="falar" id="D)MLMHH3NgDGmDk!ZJ,@">
+                                                        <value name="TEXT">
+                                                          <shadow type="text_speak" id="6{obVnQ3sbOj63nB~jK}">
+                                                            <field name="TEXT">Eu acho que isso é uma estrela</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="condicional_simples" id="_vQq*%(YhYsK!gJGfY~%">
+                                                        <value name="condicao">
+                                                          <block type="corrupt_condition_block" id="3x:Tu}:H6h2t8WWjmD7*"></block>
+                                                        </value>
+                                                        <statement name="codigo_condicional">
+                                                          <block type="falar" id="ZcjhQ7xN{3Q#vw-[*4y|">
+                                                            <value name="TEXT">
+                                                              <shadow type="text_speak" id="T+qeWnWk1/Wd8DX~i;Tx">
+                                                                <field name="TEXT">Eu acho que isso é uma flor</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="condicional_simples" id="#Meegz@r+~#qK==scN_m">
+                                                            <value name="condicao">
+                                                              <block type="corrupt_condition_block" id="Tx@@C5_qqd~oNxUfsu}S"></block>
+                                                            </value>
+                                                            <statement name="codigo_condicional">
+                                                              <block type="falar" id="dH,I1|+ThP!TDc`f#Q8L">
+                                                                <value name="TEXT">
+                                                                  <shadow type="text_speak" id=".@QZ_k:n1[*-/~orNhq]">
+                                                                    <field name="TEXT">Não sei que imagem é essa</field>
+                                                                  </shadow>
+                                                                </value>
+                                                              </block>
+                                                            </statement>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

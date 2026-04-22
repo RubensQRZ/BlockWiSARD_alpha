@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=DB4K
+Exec=<BINARY_LOCATION>
+Icon=<ICON_NAME>
+Terminal=false
