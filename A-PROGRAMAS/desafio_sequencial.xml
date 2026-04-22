@@ -1,0 +1,110 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="falar" id="cBxm~l3wnMNsd@%cgj1E" x="71" y="85">
+    <value name="TEXT">
+      <shadow type="text_speak" id="oH_Tt)lu[|jdQbNoh%|S">
+        <field name="TEXT">Mostre uma flor para eu fotografar e aperte a tecla enter.</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="espera_tecla_enter" id="L,Yv-*u}lz^oH|/]aW?~">
+        <next>
+          <block type="tocar_som" id="VwgB_T?74_Isf}pv+/_1">
+            <field name="sound">beepbeep_slow_high.wav</field>
+            <field name="wait_sound">FALSE</field>
+            <next>
+              <block type="block_wisard_get_picture" id="Pb*ry%xX9gUOXm4LGy,1">
+                <next>
+                  <block type="parar_som" id="[!d8X[L^7f;G^8jMR^cY">
+                    <next>
+                      <block type="tocar_som" id="-T8Op8#2r199e%IB;15w">
+                        <field name="sound">camera.wav</field>
+                        <field name="wait_sound">TRUE</field>
+                        <next>
+                          <block type="falar" id="T_@(ICunhJsC4B=I;tU#">
+                            <value name="TEXT">
+                              <shadow type="text_speak" id="L!0MnZ=8iVuGU2-ZRKnN">
+                                <field name="TEXT">Essa é a flor que eu fotografei</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="mostra_imagem_no_terminal_de_video" id="Ii##76[w_vQ_-~5YiNw5">
+                                <value name="IMAGE">
+                                  <shadow type="apresenta_imagem_branca" id="}RPyx1}2[_R-#Ih:K~Pd"></shadow>
+                                  <block type="apresenta_imagem_fotografada" id="mxOb#2dR^H,=drrADJZ@"></block>
+                                </value>
+                                <next>
+                                  <block type="sleep" id="qxDv4l(zI#+lqi]?5oku">
+                                    <field name="time">3</field>
+                                    <next>
+                                      <block type="falar" id="3|~`30{+iQHe|G?7LM.c">
+                                        <value name="TEXT">
+                                          <shadow type="text_speak" id="+|3S(@lk?e,NM|:y~_h*">
+                                            <field name="TEXT">Mostre uma estrela para eu fotografar e aperte a tecla enter.</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="espera_tecla_enter" id="qI%`^I{:HiaOD5S_!,V!">
+                                            <next>
+                                              <block type="tocar_som" id="#AT#h{3#B%D^=[ux?|3x">
+                                                <field name="sound">beepbeep_slow_high.wav</field>
+                                                <field name="wait_sound">FALSE</field>
+                                                <next>
+                                                  <block type="block_wisard_get_picture" id="8j}]o/XeUVZT-Jz=R,?s">
+                                                    <next>
+                                                      <block type="parar_som" id="T}c.OE`}9jy{sd22IPdO">
+                                                        <next>
+                                                          <block type="tocar_som" id="WT^K4DS1wxA0:[ujFNlH">
+                                                            <field name="sound">camera.wav</field>
+                                                            <field name="wait_sound">TRUE</field>
+                                                            <next>
+                                                              <block type="falar" id="wxYuLq,n)_rA!@_D/K[^">
+                                                                <value name="TEXT">
+                                                                  <shadow type="text_speak" id="C?HzfO=-eHp}z18GO{Q|">
+                                                                    <field name="TEXT">Essa é a estrela que eu fotografei</field>
+                                                                  </shadow>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="mostra_imagem_no_terminal_de_video" id="X[b{5~7H4Hz(9I-%Bd3-">
+                                                                    <value name="IMAGE">
+                                                                      <shadow type="apresenta_imagem_branca" id="}RPyx1}2[_R-#Ih:K~Pd"></shadow>
+                                                                      <block type="apresenta_imagem_fotografada" id="j9szQc#iHdMRG-#%p-33"></block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="sleep" id="uDZlR/GMGB-1K:GouP|G">
+                                                                        <field name="time">3</field>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

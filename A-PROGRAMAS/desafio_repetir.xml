@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="tocar_som" id="dD_|onI?VN-Bv-UOJOJ!" x="107" y="150">
+    <field name="sound">rooster.wav</field>
+    <field name="wait_sound">TRUE</field>
+    <next>
+      <block type="repetir_sempre" id="irYFtPL1+z`yT4UuPb,6">
+        <statement name="repeat_code">
+          <block type="repetir" id="_S~u9A`-__HqnS(|9eFm">
+            <field name="numero_repeticoes">2</field>
+            <statement name="repeat_code">
+              <block type="tocar_som" id="Ayj5ot/_xj*[Sxv-X#,0">
+                <field name="sound">cat.wav</field>
+                <field name="wait_sound">TRUE</field>
+                <next>
+                  <block type="sleep" id="|huQ;IM-S7p5fdENVY%p">
+                    <field name="time">0.25</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="repetir" id="W|rE;*mPMUIW^xHk3O!n">
+                <field name="numero_repeticoes">3</field>
+                <statement name="repeat_code">
+                  <block type="tocar_som" id="TQ;ogU[IW6~(2b;hq1li">
+                    <field name="sound">dog.wav</field>
+                    <field name="wait_sound">TRUE</field>
+                    <next>
+                      <block type="sleep" id="aP_BeA^A(Qdq7aH;~JYt">
+                        <field name="time">0.25</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="tocar_som" id="zQu}z!hsq1lBdtZRLQ.l">
+                    <field name="sound">cow.wav</field>
+                    <field name="wait_sound">TRUE</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

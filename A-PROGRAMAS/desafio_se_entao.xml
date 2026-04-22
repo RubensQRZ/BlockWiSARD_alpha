@@ -1,0 +1,106 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="falar" id="e%P#~o6Gsv8B`AaYqKLt" x="65" y="63">
+    <value name="TEXT">
+      <shadow type="text_speak" id="/nM6#3[.KjQ|]1Hd4nS-">
+        <field name="TEXT">tecle f para eu fotografar e mostrar uma imagem</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="falar" id="_KTyF},j|;ropWenjs!i">
+        <value name="TEXT">
+          <shadow type="text_speak" id="_jsHDL0iE{H|9^G;|Pk3">
+            <field name="TEXT">tecle t para eu falar um texto escrito no teclado</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="repetir_sempre" id="1Si}1^fN.Z:[3;}/Q)uF">
+            <statement name="repeat_code">
+              <block type="falar" id="/:-Q~LlW5si8P+tg~(Wv">
+                <value name="TEXT">
+                  <shadow type="text_speak" id="GB*Q]=MVx(1WMzU(*B2M">
+                    <field name="TEXT">tecle a letra da sua opção e aperte enter</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="le_texto_teclado" id="x?Oz:].vwO//D0KH%YE}">
+                    <next>
+                      <block type="condicional_simples" id="uwJ)6u2|@=0SXh+R/[14">
+                        <value name="condicao">
+                          <block type="condicionante_texto_teclado" id="Y2Et#}UA[0VFjtxUt9^p">
+                            <field name="texto_teclado">f</field>
+                          </block>
+                        </value>
+                        <statement name="codigo_condicional">
+                          <block type="falar" id="nG1nKcI1Y=/(*3@7/B(C">
+                            <value name="TEXT">
+                              <shadow type="text_speak" id="fR)h?sY.!q2D]jq-B+tI">
+                                <field name="TEXT">mostre uma imagem para eu fotografar e tecle enter</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="espera_tecla_enter" id="0`NSjD#9UA8`-.kQk,]/">
+                                <next>
+                                  <block type="block_wisard_get_picture" id="-:A(HG|^_k!M?EmiZ._;">
+                                    <next>
+                                      <block type="mostra_imagem_no_terminal_de_video" id="SsHdD0T^jP-}[i7O!{3{">
+                                        <value name="IMAGE">
+                                          <shadow type="apresenta_imagem_branca" id="r:996V4,XubyGOJU;8!3"></shadow>
+                                          <block type="apresenta_imagem_fotografada" id="a7!^v516}G4iOS,HX;ny"></block>
+                                        </value>
+                                        <next>
+                                          <block type="sleep" id="O#IB-7=rR~s;{.}ud/S{">
+                                            <field name="time">2</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="condicional_simples" id=",u+XhE)JjJ1!+*On.*%V">
+                            <value name="condicao">
+                              <block type="condicionante_texto_teclado" id="q~|r,*{)ZRD3GZ7R:-?Z">
+                                <field name="texto_teclado">t</field>
+                              </block>
+                            </value>
+                            <statement name="codigo_condicional">
+                              <block type="falar" id="}W2Bf{pL[NZ]=tgccC4C">
+                                <value name="TEXT">
+                                  <shadow type="text_speak" id="e#Al-VH9-T#RKzmRg6wa">
+                                    <field name="TEXT">digite um texto no teclado e tecle enter</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="le_texto_teclado" id="#|CNWyrW.psnIE6w9jJc">
+                                    <next>
+                                      <block type="falar" id="-y:m0S3#.7Uvjp9c?xnS">
+                                        <value name="TEXT">
+                                          <shadow type="text_speak" id="Bg7IIRHnUZq_9%+fD2e(">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="apresenta_texto_teclado" id="h!d]*kuh?)Pd)%t71p7["></block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
