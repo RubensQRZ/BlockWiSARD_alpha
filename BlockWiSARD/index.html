@@ -1,0 +1,583 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00878F">
+  <link rel="icon" href="img/BlockWiSARDImages/BlockWiSARDIcon.ico">
+  <title>BlockWiSARD Beta 2.01</title>
+
+   <!-- **********************************************************************************
+   This is an Ardublockly (https://github.com/carlosperate/ardublockly) fork. 
+   All changes in the original code are marked with "modified by/included by RLQ  - BlockWiSARD"
+   ************************************************************************************-->
+  
+  <!--BlockWiSARD-->
+  <!--Define Pins and other variables used by BlockWiSARD ( Included by RLQ BlockWiSARD )-->
+  <script src="BlockWiSARD_setup.js"></script>
+  <!--Define texts of index.html in different languages-->
+  <script src="ardublockly_lang.js"></script>
+  
+  <!-- Materialize, Prettify, and Ardublockly CSS -->
+  <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
+  <link rel="stylesheet" href="prettify/arduino.css">
+  <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
+
+  <!-- Ardublockly - These three files contain the compress version -->
+  <!--script src="../blockly/blockly_compressed.js"></script>
+  <script src="../blockly/blocks_compressed.js"></script>
+  <script src="../blockly/python_compressed.js"></script-->
+  <!-- To use the uncompressed version comment out the above and comment in the ones below -->
+  <script src="../blockly/blockly_uncompressed.js"></script>
+  <script src="../blockly/blocks/logic.js"></script>
+  <script src="../blockly/blocks/loops.js"></script>
+  <script src="../blockly/blocks/math.js"></script>
+  <script src="../blockly/blocks/text.js"></script>
+  <script src="../blockly/blocks/lists.js"></script>
+  <script src="../blockly/blocks/colour.js"></script>
+  <script src="../blockly/blocks/variables.js"></script>
+  <script src="../blockly/blocks/procedures.js"></script>
+	
+  <script src="../blockly/blocks/BlockWiSARD/atuadores.js"></script>
+  <script src="../blockly/blocks/BlockWiSARD/sensores.js"></script>
+  <script src="../blockly/blocks/BlockWiSARD/controles.js"></script>
+  <script src="../blockly/blocks/BlockWiSARD/robo.js"></script>
+  <script src="../blockly/blocks/BlockWiSARD/wisard.js"></script>
+
+  <script src="../blockly/generators/python.js"></script>
+  <script src="../blockly/generators/python/logic.js"></script>
+  <script src="../blockly/generators/python/loops.js"></script>
+  <script src="../blockly/generators/python/math.js"></script>
+  <script src="../blockly/generators/python/text.js"></script>
+  <script src="../blockly/generators/python/lists.js"></script>
+  <script src="../blockly/generators/python/colour.js"></script>
+  <script src="../blockly/generators/python/variables.js"></script>
+  <script src="../blockly/generators/python/procedures.js"></script>
+
+  <script src="../blockly/generators/python/atuadores.js"></script>
+  <script src="../blockly/generators/python/sensores.js"></script>
+  <script src="../blockly/generators/python/controles.js"></script>
+  <script src="../blockly/generators/python/robo.js"></script>
+  <script src="../blockly/generators/python/wisard.js"></script>
+
+
+  <!-- Default language js files, user selection appended to head on load -->
+
+  <script src="msg/BlockWiSARD/pt.js"></script>
+  <script src="../blockly/msg/BlockWiSARD/pt.js"></script>
+
+  <!--script src="msg/BlockWiSARD/en.js"></script>
+  <script src="../blockly/msg/BlockWiSARD/en.js"></script-->
+
+
+</head>
+ <!--********************************************************************************-->
+ <!--  ( Modified by RLQ DB4K )  Included background image -->
+ <!--body background="img/BlockWiSARDImages/fundoDB4k.jpg" -->
+ <!---------------------------------------------------------------------------------->
+  <!-- Horizontal Navigation bar -->
+  <!--BlockWiSARD  - Mudada a cor da nav--> 	 
+  <nav class="nav-fixed  blockWisard_blue">
+    <div class="nav-wrapper container">
+      <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      <a id="logo-container" class="brand-logo">
+	    <!--********************************************************************************--> 
+        <!--( Modified by RLQ DB4K )  Included DB4K image logo -->		
+        <!--span class="app_title translatable_title">Ardublockly:</span-->
+        <span class="app_title"><img src="img/BlockWiSARDImages/logo_BlockWiSARD_inicio.png" alt="BlockWiSARD" align="middle"></span>
+		<span class="app_title"><img src="img/BlockWiSARDImages/invisible_space_index.png" align="middle"></span>
+		<!---------------------------------------------------------------->
+        <!-- Sketch name editable text field -->
+        <span class="sketch_name_wrapper">
+          <i class="mdi-image-edit sketch_name_icon"></i>
+          <input id="sketch_name" class="sketch_name" type="text">
+        </span>
+      </a>
+      <!-- Horizontal Navbar links only shown on large resolutions -->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		<!--( Modified by RLQ BlockWiSARD ) -->
+        <li><a href="#" id="button_new"><span class="translatable_new_prog">Novo</span><i class="mdi-toggle-check-box-outline-blank left"></i></a></li>
+        <li><a href="#" id="button_load"><span class="translatable_open">Abrir</span><i class="mdi-file-file-upload left"></i></a></li>
+        <li><a href="#" id="button_save"><span class="translatable_save">Salvar</span><i class="mdi-file-file-download left"></i></a></li>
+
+         <li><!----><div style= "display:none"><!----><a href="#" id="button_delete"><span class="translatable_deleteAll">fechar</span><i class="mdi-action-delete left"></i></a><!----></div><!----></li>
+	    <!---->
+		<li><div style= "display:none"><a class="modal-trigger"href="#ModalSobre">Sobre<i class="mdi-action-help left"></i></a></div></li>
+		<!---->
+		<!-------------------------------------------------------------------------------------->
+
+      </ul>
+    </div>
+  </nav>
+
+<!-- *********************************************************************************************************************************** -->
+<!-- ( Modified by RLQ BlockWiSARD )  -->
+<!--************************************************************************************************************************************ -->
+<!-- Sidebar navigation -->
+ <ul id="slide-out" class="side-nav">
+		<li class="logo"><img src="img/BlockWiSARDImages/logo_BlockWiSARD_sidenav.png" alt="BlockWiSARD logo image"></li>
+		<li class="no-padding">
+			<ul>
+				<!--***********************************************************-->	  
+				<!-- Modified by RLQ-BlockWiSARD-->
+				<li class="no-padding">
+					<ul class="collapsible collapsible-accordion">
+						<li>
+						  <div class="collapsible-header"><span class="translatable_program" >Programa</span> <i class="mdi-editor-format-align-left"></i></div>
+						  <div class="collapsible-body">
+							<ul>
+							<!--Included by RLQ-BlockWiSARD -->
+							<li><a href="#" id="menu_new"><span  class="translatable_new_prog">Novo</span> <i class="mdi-toggle-check-box-outline-blank left large"></i></a></li>
+							<!------------------------->
+                            <!-- Modified by RLQ-BlockWiSARD "Salvar Código" and "IDLE" Options included-->
+							<li id="menu_load"><a href="#"><span  class="translatable_open">Abrir</span> <i class="mdi-file-file-upload left"></i></a></li>
+							<li id="menu_save"><a href="#"><span  class="translatable_save">Salvar</span> <i class="mdi-file-file-download left"></i></a></li>
+							<!---->			
+							</ul>
+						  </div>
+						</li>
+					</ul>
+					<ul class="collapsible collapsible-accordion">
+						<li>
+                          <!-- BLockWISARD -->
+                            <div class="collapsible-header"><span class="translatable_python_code">Código Python</span> <i class="material-icons">{ }</i></div>
+                          <!---->
+						  <div class="collapsible-body">
+							<ul>
+							<li id="menu_save_codigo"><a href="#"><span class="translatable_save">Salvar</span><i class="mdi-file-file-download left"></i></a></li>
+							
+							<li id="menu_abrir_ide"><div style= "display:none"><a href="#"><span  class="translatable_IDLE">IDLE</span><i class="mdi-action-open-in-browser left"></i></a></div></li>
+							
+							<!---->			
+							</ul>
+						  </div>
+						</li>
+					</ul>
+				</li>	
+				<!---->  
+				<!--***********************************************************-->
+				<li id="menu_delete"><div style= "display:none"><a href="#">Apagar<i class="mdi-action-delete left"></i></a></div></li>
+                <div>
+				  <li id="menu_settings"><a href="#"><span class="translatable_settings">Configurações</span><i class="mdi-action-settings left"></i></a></li>
+				  <!--Modified by RLQ-BlockWiSARD  - adcionadas as opções  de menu "reload" e sobre -->
+                   <li id="menu_reload"><a href="#"><span  class="translatable_reload">Reload</span><i class="mdi-action-cached left"></i></a></li>
+                   <li id="modal_about_open"><a href="#"><span  class="translatable_about">Sobre</span><i class="mdi-action-help left"></i></a></li>
+                </div>
+			</ul>
+				<li class="no-padding">
+				  <ul class="collapsible collapsible-accordion">
+					<li>
+					  <div class="collapsible-header" style="display:none">Exemplos<i class="mdi-navigation-arrow-drop-down"></i></div>
+					  <div class="collapsible-body">
+						<ul>
+						<!--Modified by RLQ-DB4K  - modificados os exemplos -->
+						  <li id="menu_example_1"><a href="#!">Piscar LED</a></li>
+						  <li id="menu_example_2"><a href="#!">Mover Servo Motor</a></li>
+						  <li id="menu_example_3"><a href="#!">Girar Motor DC</a></li>
+						  <li id="menu_example_4"><a href="#!">Escrever no LCD</a></li>
+						 <!-- <li id="menu_example_5"><a href="#!">Stepper knob</a></li> -->
+						  <li id="menu_example_5" style="display:none" ><a href="#!"></a></li>
+						</ul>
+					  </div>
+					</li>
+			    </ul>
+		    </li>
+		<li class="no-padding side-menu-end">&nbsp;</li>
+</ul>
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------------------->
+<!-- End sidebar ------------------------->
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l8" style="position:relative">
+        <!-- Toolbox visibility button -->
+        <a id="button_toggle_toolbox" class="waves-effect waves-light btn-flat button_toggle_toolbox_off" style="display: none"><i id="button_toggle_toolbox_icon" class="mdi-action-visibility-off"></i></a>
+        <!-- Arduino IDE action buttons -->
+        <div id="ide_buttons_wrapper">
+              <!--*********************************************************************************-->
+			  <!-- Button Stop ( Included by RLQ DB4K )-->
+             <!-- Arduino IDE action buttons -->
+              <!-- criada uma div para o botão stop -->
+              <div>
+			  <a id="button_stop" class="waves-effect waves-light waves-circle btn-floating btn-large red z-depth-1-half" title ="Parar Execução do Programa na Placa"><i class="mdi-av-stop"></i></a>
+			  <!-- Begging of stop spinner -->
+				<div id="button_stop_spinner" class="preloader-wrapper active stop_loader" style="display:none">
+					<div class="spinner-layer stop-spinner-orange">
+					  <div class="circle-clipper left">
+						<div class="circle"></div>
+					  </div><div class="gap-patch">
+						<div class="circle"></div>
+					  </div><div class="circle-clipper right">
+						<div class="circle"></div>
+					  </div>
+					</div>
+					<div class="spinner-layer stop-spinner-dark-teal">
+					  <div class="circle-clipper left">
+						<div class="circle"></div>
+					  </div><div class="gap-patch">
+						<div class="circle"></div>
+					  </div><div class="circle-clipper right">
+						<div class="circle"></div>
+					  </div>
+					</div>
+					<div class="spinner-layer stop-spinner-yellow">
+					  <div class="circle-clipper left">
+						<div class="circle"></div>
+					  </div><div class="gap-patch">
+						<div class="circle"></div>
+					  </div><div class="circle-clipper right">
+						<div class="circle"></div>
+					  </div>
+					</div>
+					<div class="spinner-layer stop-spinner-light-teal">
+					  <div class="circle-clipper left">
+						<div class="circle"></div>
+					  </div><div class="gap-patch">
+						<div class="circle"></div>
+					  </div><div class="circle-clipper right">
+						<div class="circle"></div>
+					  </div>
+					</div>
+				  </div>
+		  <!-- desable stop button -->
+			<div id="button_stop_desable" class="preloader-wrapper active stop_loader" style="display:none"> </div>
+			<!-- End of stop Spinner-->
+            </div> <!-- fim da Div para tornar o botão stop invisível -->
+		  <!------------------------------------------------------------------------------------->
+		  <!--*********************************************************************************-->
+		  <!-- (modified by  RLQ DB4K ) button left and button middle -- included div display = none -->
+		  <div style="display:none">
+		  <a id="button_ide_left" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_yellow"><i id="button_ide_left_icon" class="mdi-action-open-in-browser"></i></a>
+          <a id="button_ide_middle" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_teal"><i id="button_ide_middle_icon" class="mdi-navigation-check"></i></a>
+          </div>
+		  <!--------------------------------------------------------------------------------------->
+  		  <a id="button_ide_large" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_orange"><i id="button_ide_large_icon" class="mdi-av-play-arrow"></i></a>
+          <div id="button_ide_large_spinner" class="preloader-wrapper active ide_loader" style="display:none">
+            <div class="spinner-layer spinner-orange">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-dark-teal">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-yellow">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+            <div class="spinner-layer spinner-light-teal">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+		<!--***************************************************************************************-->
+		<!--Included by RLQ DB4K - Defines a invisible button used to desable the ide_large_button -->
+		<div id="button_ide_desable" class="preloader-wrapper active ide_loader" style="display:none"> </div>
+		<!------------------------------------------------------------------------------------------->
+        <!-- Blockly Panel -->
+        <div class="card-panel white" style="padding: 0">
+          <div id="blocks_panel" class="content blocks_panel_large">
+            <div id="content_blocks" class="content z-depth-1"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m12 l4">
+        <ul class="collapsible z-depth-1" data-collapsible="accordion">
+          <li>
+		    <!--***********************************************************************-->
+		  	<!--( Modified by RLQ BlockWiSARD )-->
+			<div class="collapsible-header">
+                <span class="collapsible_logo" id = "python_code_logo">{}</span>
+              <span class="translatable_python_code" id = "python_code_title">Código Python</span>
+            </div>
+		    <!-------------------------------------------------------------------------->
+            <div class="collapsible-body">
+              <pre id="content_python" class="content content_height_transition content_python_large"></pre>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header" id="xml_collapsible_header">
+			<!--********************************************************************-->
+			<!--( Modified by RLQ DB4K )-->
+			<!--
+
+				  <span class="collapsible_logo">&#60; &#62;</span>
+				  <span class="translatable_blocksXml">Blocks XML</span>
+				</div>
+				<div class="collapsible-body" style="position:relative" id="xml_collapsible_body">
+				  <a class="btn-floating btn-large waves-effect waves-light arduino_teal z-depth-1-half" id="button_load_xml"><i class="mdi-action-extension"></i></a>
+				  <textarea id="content_xml" class="content content_height_transition content_xml_large" wrap="soft"></textarea>
+				</div>
+
+			 -->
+
+			<!--The commented code above was rewritten bellow-->
+		     <span class="collapsible_logo"  style="display:none"></span>
+            </div>
+            <div class="collapsible-body" style="display:none" id="xml_collapsible_body">
+              <a style="display:none" id="button_load_xml"><i class="mdi-action-extension" style="display:none"></i></a>
+              <textarea id="content_xml" class="content content_height_transition content_xml_large" style="display:none" wrap="soft"></textarea>
+            </div>
+			<!---->
+			<!------------------------------------------------------------------------>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- IDE Output content -->
+  <div class="ide_output_wrapper">
+    <ul class="collapsible ide_output_collapsible" data-collapsible="expandable">
+
+	  <!--********************************************************************************-->
+	  <!--( Included by RLQ BlockWiSARD ) -->
+	  <ul id="nav-mobile" class="right hide-on-med-and-down">
+	     <span class="app_title"><a href="" target="_blank"><img src="img/BlockWiSARDImages/logoBaseblockWiSARD.png" alt="LabZero/UFRJ" align="middle"></a></span>
+	  </ul>
+	  <!------------------------------------------------------------------------------------>
+
+      <li>
+        <div id="ide_output_collapsible_header" class="collapsible-header ide_output_header_normal">
+           <!--Included by RLQ BLockWiSARD -->
+           <input name="grpRadioLaguage" type="radio" checked id="radioPortuguese" onchange="Ardublockly.changeLanguageWithId('pt')">
+            <label for="radioPortuguese"><font color="white">Português</font></label>
+           <input name="grpRadioLaguage" type="radio"  id="radioInglish" onchange="Ardublockly.changeLanguageWithId('en')">
+            <label for="radioInglish"><font color="white">English</font></label>
+            <!------------------------------->
+            <i class="mdi-action-swap-vert Medium" style="font-size: 2.2rem;"></i>
+        </div>
+        <div class="collapsible-body">
+          <div id="content_ide_output" class="content"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="ide_output_spacer"></div>
+
+  <!--********************************************************************************-->
+  <!--( Modified by RLQ BlockWiSARD ) -->
+
+  <!-- Settings: Displayed as a Materialize Modal -->
+  <div id="settings_dialog" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4><span class="translatable_settings">Settings</span></h4>
+      <div class="modal_section" style="display:none">
+        <label><span class="translatable_compilerLocation">Compiler Location</span>:</label>
+        <input type="text" id="settings_compiler_location">
+      </div>
+      <div class="modal_section" style="display:none">
+        <label><span class="translatable_sketchFolder">Sketch Folder</span>:</label>
+        <input type="text" id="settings_sketch_location">
+      </div>
+      <div class="modal_section" style="display:none">
+        <label><span class="translatable_arduinoBoard">Arduino Board</span>:</label>
+        <select name="settings_board" id="board">
+          <option value="uno" class="translatable_arduinoBoardDefault">Arduino Board unknown</option>
+        </select>
+      </div>
+      <div class="modal_section" style="display:none">
+        <label><span class="translatable_comPort">COM Port</span>:</label>
+        <select name="settings_serial" id="serial_port">
+          <option value="COMX" class="translatable_comPortDefault">COM Port unknown</option>
+        </select>
+      </div>
+      <!--Included by RLQ BlockWiSARD -->
+      <div class="modal_section">
+        <label><span class="translatable_output_GPIO">GPIO (Raspberry/Arduino/Sem GPIO)</span>:</label>
+        <select name="settings_GPIO" id="gpio"></select>
+      </div>
+      <div class="modal_section" style= "display:none">
+        <label><span class="translatable_IDLElocation">Localizção Python IDLE</span>:</label>
+        <input type="text" id="settings_IDLE_location">
+      </div>
+      <div class="modal_section" style="display:none">
+        <select name="ocult_folder_list" id="wisard_train_folder_list">
+          <option value="FOLDERX" class="translatable_folder_default">triangulo</optiion>
+        </select>
+      </div>
+      <!-- -->
+      <div class="modal_section">
+        <label><span class="translatable_language">Língua</span>:</label>
+        <select name="settings_language" id="language"></select>
+      </div>
+      <div class="modal_section" >
+        <label><span class="translatable_defaultIdeButton">Botão Enviar Código Padrão</span>:</label>
+        <select name="settings_ide" id="ide_settings">
+          <option value="verify" class="translatable_defaultIdeButtonDefault">IDE options unknown</option>
+        </select>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">OK</span></a>
+    </div>
+  </div>
+<!----------------------------------------------------------------------------------------------------->
+
+  <!-- Select Additional Blocks menu -->
+  <div id="blocks_menu" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div>
+        <h4><span class="translatable_addBlocksTitle">Additional Blocks</span></h4>
+      </div>
+      <div id="blocks_menu_body"></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="waves-effect btn-flat modal-close"><span class="translatable_return">Retornar</span></a>
+    </div>
+  </div>
+
+  <!-- General Alert: Content is loaded using JavaScript to display alerts -->
+  <div id="gen_alert" class="modal modal_small modal-fixed-footer">
+    <div class="modal-content">
+      <h5 id="gen_alert_title">Empty Alert</h5>
+      <p><span id="gen_alert_body">Empty alert text</span></p>
+    </div>
+    <div class="modal-footer">
+      <a id="gen_alert_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_ok">Ok</span></a>
+      <a id="gen_alert_cancel_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_cancel">Cancela</span></a>
+    </div>
+  </div>
+
+  <!-- Prompt: Content is loaded using JavaScript to display input prompt -->
+  <div id="gen_prompt" class="modal modal_small modal-fixed-footer">
+    <div class="modal-content">
+      <p><span id="gen_prompt_message">Prompt message</span></p>
+      <p><input id="gen_prompt_input" value="test" /></p>
+    </div>
+    <div class="modal-footer">
+        <a id="gen_prompt_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_ok">Ok</span></a>
+      <a id="gen_prompt_cancel_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_cancel">Cancela</span></a>
+    </div>
+  </div>
+
+
+<!-- Local Modal to be shown if Ardublockly Server is not running. -->
+  <div id="not_running_dialog" class="modal">
+    <div class="modal-content">
+      <div>
+        <h4 id="gen_alert_title"><span class="translatable_noServerTitle">Aplicação BlockWiSARD não está Rodando</span></h4>
+      </div>
+      <div class="translatable_noServerBody">
+            <p>Para enviar o programa python gerado pelos blocos para o interpretador
+             python você deve intalar a BlockWiSARD no seu computador.</p>
+            <p>No entanto, você pode baixar o programa python gerado pelos blocos acessando o menu
+             oculto no canto superior esquerdo desta página e selecionando a opção
+             <strong>Código Python</strong> e depois a opção <strong>Salvar</strong>.
+             Para rodar o programa salvo no seu computador você precisa ter os pacotes
+             python requeridos instalados.
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="gen_alert_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_ok">Ok</span></a>
+    </div>
+  </div>
+
+
+
+
+
+ <!--******************************************************************************************* -->
+  <!-- (Include by RLQ-BlockWiSARD) - Modal "About BlockWiSARD" -->
+	<div id="about_modal" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <div>
+          <h4 id="gen_alert_title"><span class="translatable_aboutModalTitle">Sobre a BlockWiSARD</span></h4><span class="translatable_version">Beta 2.01</span>
+      </div>
+      <div class="translatable_aboutModalText">
+
+        <p>
+		<strong>BlockWiSARD</strong>  é um projeto do <strong>PPGI</strong>  - Programa de Pós-Graduação em Informática da <strong>UFRJ</strong>
+		(<a href="http://www.ppgi.ufrj.br" target="_blank">www.ppgi.ufrj.br</a>)  realizado com apoio da Coordenação de Aperfeiçoamento de Pessoal de
+            Nível Superior – Brasil  <strong>CAPES</strong> – Código de Financiamento 001.
+		(<a href="https://www.capes.gov.br/" target="_blank">https://www.capes.gov.br/</a>).
+		</p>
+		<p>
+		A <strong>BlockWiSARD</strong> é um ambiente de programação em blocos que possibilita o o aprendizado conjunto de  conceitos básicos de programação
+        e primitivas de Inteligência Artificial.
+		</p>
+		<p>
+		A <strong> BlockWiSARD </strong> está sendo  desenvolvida por <strong> Rubens Lacerda Queiroz </strong>
+		como parte de sua Tese de Doutorado em Informática.
+		</p>
+		<p>
+		Esta é a versão “cliente-side” da <strong> BlockWiSARD </strong>.
+		</p>
+		<p>
+		A <strong>BlockWiSARD </strong> possui também uma versão de demonstraão WEB, que pode ser usada para gerar os códigos Python '+
+        'que podem ser baixados e rodadados na máquina local, desde que se façam as instalações dos pacotes Python necessários. '+
+		</p>
+		<p>
+		A <strong> BlockWiSARD </strong> foi desenvolvida com base no Ambiente  <strong>DuinoBlocks4Kids</strong> (<a href="http://ginape.nce.ufrj.br/LIVRE/paginas/db4k/db4k.html" target="_blank">http://ginape.nce.ufrj.br/LIVRE/paginas/db4k/db4k.html</a>)
+        que foi construído a partir do ambiente <strong>Ardublockly</strong> (<a href="https://ardublockly.embeddedlog.com/" target="_blank">https://ardublockly.embeddedlog.com/</a>) e
+		utiliza as bibliotecas <strong>Blockly</strong> (<a href="https://developers.google.com/blockly/" target="_blank">https://developers.google.com/blockly/</a> ) e
+		<strong> Materialize</strong> (<a href="http://materializecss.com" target="_blank">http://materializecss.com/</a>).
+		</p>
+
+
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a id="gen_alert_ok_link" href="#" class="waves-effect btn-flat modal-close"><span class="translatable_ok">Ok</span></a>
+    </div>
+  </div>
+  <!-- ----------------------------------------------------------------------------------------------------------------->
+
+
+
+  <!-- Desktop version of Ardublockly JS, needs to be loaded first. -->
+  <script src="ardublockly_desktop.js"></script>
+  <!-- jQuery and Materialize JS -->
+  <script src="js_libs/jquery-2.1.3.min.js"></script>
+  <script src="materialize/materialize.js"></script>
+  <!-- FileSaver JS -->
+  <script src="js_libs/FileSaver.min.js"></script>
+  <!-- JS Diff -->
+  <script src="js_libs/diff.js"></script>
+  <!-- Prettify JS -->
+  <script src="prettify/prettify.js"></script>
+  <!-- Ardublockly app -->
+  <script src="ardublocklyserver_ajax.js"></script>
+  <script src="ardublockly_lang.js"></script>
+  <script src="ardublockly_design.js"></script>
+  <!---->
+  <script src="BlockWiSARD_toolbox.js"></script>
+  <!---->
+  <script src="ardublockly_blockly.js"></script>
+  <script src="ardublockly.js"></script>
+  <!---- Included by RLQ BlockWiSARD-->
+  <script src="BlockWiSARD.js"></script>
+  
+  <script>
+    window.addEventListener('load', function load(event) {
+      window.removeEventListener('load', load, false);
+      Ardublockly.init();
+    });
+  </script>
+
+
+</body>
+</html>
